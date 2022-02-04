@@ -7,15 +7,15 @@ int main()
 {
     map<char, int> count1;
     string s1 = "apple";
-    string s2 = "elapp";
+    string s2 = "elppa";
 
     for (int i = 0; i < s1.size(); i++)
-        count1[s1[i] - 'a']++;
+        count1[s1[i]]++;
     for (int i = 0; i < s2.size(); i++)
-        count1[s2[i] - 'a']--;
+        count1[s2[i]]--;
 
     int flag = 1;
-    for (int i = 0; i < 26; i++)
+    for (int i = 'a'; i <= 'z'; i++)
     {
         if (count1[i] != 0)
         {
@@ -25,6 +25,9 @@ int main()
         }
     }
     if (flag)
+    {
+
         cout << "ANAGRAM";
+    }
     return 0;
 }
